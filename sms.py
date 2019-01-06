@@ -8,7 +8,7 @@ account_sid = 'your twilio api sid goes here'
 auth_token = 'your twilio auth token goes here'
 client = Client(account_sid, auth_token)
 # message template  # this came from twilio
-# message = client.messages.create(body="Join Earth's mightiest heroes. Like Kevin Bacon.",from_='+18645010610',to='+18645094713')  # this came from twilio
+# message = client.messages.create(body="Join Earth's mightiest heroes. Like Kevin Bacon.",from_='+18008675309',to='+18008675309')  # this came from twilio
 
 def get_txt_client():  # Code by Christopher Torok
 	return client
