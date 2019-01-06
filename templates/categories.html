@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Categories:</h1>
+
+	<form action="/send" method="post">
+  		{% for x in range(0, categories_dict['name']|length ) %}
+  		<input type="checkbox" value="{{categories_dict['category_id'][x]}}" name="{{categories_dict['name'][x]}}">{{categories_dict['name'][x]}}
+  		<br>
+  		{% endfor %}
+  		<input type="submit" value="Send to Phone">
+	</form>
+
+</body>
+</html>

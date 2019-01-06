@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Transaction</title>
+</head>
+<body>
+	<form action="/update-transaction" method="post">
+		<h1>Edit Transaction</h1>
+		<!-- transaction information: id, date, payee, category_name: [text box] -->
+		<ul>
+			<li><label>ID: {{ trans_data['id'] }}</label></li>
+			<li><label>Date: {{ trans_data['date'] }}</label></li>
+			<li><label>Payee: {{ trans_data['payee_name'] }}</label></li>
+			<li><label>Category Name: {{ trans_data['category_name'] }}</label></li>
+		</ul>
+		<label>Amount: $</label>
+		<input type="hidden" id="{{trans_data['id']}}" name="id" value="{{trans_data['id']}}">
+		<input type="text" id="update-amount" name="update-amount" value="{{trans_data['amount']/1000}}">
+		<input type="submit" value="update">
+	</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/edit-transaction" method="post">
+	{% for each in recent_transactions %}
+  <input type="radio" name="id" value="{{ each['id'] }}">{{ each['date'] }} - {{ each['payee_name'] }} : ${{ each['amount'] }}<br>
+  	{% endfor %}
+  <input type="submit" value="Edit Transaction">
+
+</form>
+
+</body>
+</html>
